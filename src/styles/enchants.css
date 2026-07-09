@@ -1,0 +1,89 @@
+.enchants-page {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.enchants-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.shards-display {
+    font-size: 26px;
+    color: #00bcd4;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.shards-display span {
+    font-size: 32px;
+}
+
+.enchants-info {
+    color: #666;
+    font-size: 13px;
+}
+
+.pet-select-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 15px 0;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.pet-select-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.pet-select-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(3px);
+}
+
+.pet-select-item.selected {
+    background: rgba(0, 188, 212, 0.1);
+    border-left-color: #00bcd4;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.1);
+}
+
+.enchant-action {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.enchants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.enchant-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s;
+}
+
+.enchant-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+}

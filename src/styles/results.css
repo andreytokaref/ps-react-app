@@ -1,0 +1,54 @@
+.results-panel {
+    max-height: 500px !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.results-panel h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+    padding-right: 5px;
+}
+
+.result-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 10px;
+    animation: slideIn 0.3s ease;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.result-item strong {
+    color: #f0c040;
+}
+
+.rarity-block {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 12px;
+    white-space: normal;
+}
+
+.shards-earned {
+    color: #00bcd4;
+    font-weight: bold;
+    margin-left: 8px;
+}

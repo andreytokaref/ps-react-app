@@ -1,0 +1,218 @@
+/* Страница яиц */
+.egg-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.egg-panel {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.results-panel {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 80px;
+}
+/* Выбор яйца */
+.egg-select-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    margin-bottom: 10px;
+}
+
+.egg-select-header:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.egg-select-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.egg-select-arrow {
+    font-size: 14px;
+    color: #888;
+    transition: transform 0.3s;
+}
+
+.egg-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 15px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.egg-select-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 8px;
+    border: 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white;
+    font-size: 11px;
+    background: transparent;
+    font-family: inherit;
+}
+
+.egg-select-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.egg-select-btn.active {
+    box-shadow: 0 0 15px currentColor;
+    transform: scale(1.02);
+}
+
+/* Яйцо */
+.egg-container {
+    text-align: center;
+    cursor: pointer;
+    margin: 20px 0;
+    position: relative;
+}
+
+.egg-animation {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.egg-icon {
+    font-size: 100px;
+    animation: eggFloat 3s infinite;
+    display: inline-block;
+}
+
+@keyframes eggFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-5deg); }
+    75% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.egg-container:hover .egg-animation {
+    transform: scale(1.1);
+}
+
+.egg-container:active .egg-animation {
+    transform: scale(0.9);
+}
+
+.egg-info {
+    text-align: center;
+}
+
+.egg-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.open-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.auto-speed {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Шансы */
+.chances-container {
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-height: 350px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 12px;
+    animation: fadeIn 0.3s ease;
+}
+
+.chances-container h4 {
+    color: #aaa;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.rarity-group {
+    margin-bottom: 10px;
+}
+
+.rarity-title {
+    font-weight: bold;
+    font-size: 12px;
+    padding-bottom: 4px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chance-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 8px;
+    font-size: 11px;
+}
+
+.chance-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .egg-page {
+        grid-template-columns: 1fr;
+    }
+}
+.results-panel {
+    max-height: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.results-panel h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+    flex: 1;
+    padding-right: 5px;
+}
