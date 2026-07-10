@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ps-react-app/static/css/main.2c802003.css",
-    "main.js": "/ps-react-app/static/js/main.c3a73336.js",
+    "main.css": "/ps-react-app/static/css/main.15be4822.css",
+    "main.js": "/ps-react-app/static/js/main.7a91973f.js",
     "index.html": "/ps-react-app/index.html",
-    "main.2c802003.css.map": "/ps-react-app/static/css/main.2c802003.css.map",
-    "main.c3a73336.js.map": "/ps-react-app/static/js/main.c3a73336.js.map"
+    "main.15be4822.css.map": "/ps-react-app/static/css/main.15be4822.css.map",
+    "main.7a91973f.js.map": "/ps-react-app/static/js/main.7a91973f.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c802003.css",
-    "static/js/main.c3a73336.js"
+    "static/css/main.15be4822.css",
+    "static/js/main.7a91973f.js"
   ]
 }
